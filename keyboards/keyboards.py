@@ -8,8 +8,8 @@ main_kb = ReplyKeyboardMarkup(
             KeyboardButton(text="Запросить данные"),
         ],
         [
-          KeyboardButton(text="Проверить срок полезного испознания"),
-          KeyboardButton(text="Автоуведомления"),
+          KeyboardButton(text="Проверить подписку"),
+          KeyboardButton(text="Включить автоуведомления"),
         ]
     ],
     resize_keyboard=True,

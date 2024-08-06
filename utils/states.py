@@ -17,6 +17,7 @@ class UserInsertInnStates(StatesGroup):
 
 class Registration(StatesGroup):
     """РЕГИСТРАЦИЯ"""
+    REGISTRATION_NUMBER = State()
     REGISTRATION = State()
     PHONE = State()
 
