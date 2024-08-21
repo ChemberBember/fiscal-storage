@@ -14,6 +14,7 @@ class UserInsertInnStates(StatesGroup):
     ADD_NEW_INN = State()
     ADD_ORG_NAME = State()
     ADD_ADDRESS = State()
+    DB_INSERT = State()
 
 class Registration(StatesGroup):
     """РЕГИСТРАЦИЯ"""

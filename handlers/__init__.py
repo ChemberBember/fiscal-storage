@@ -1,1 +1,1 @@
-from . import user_comands,insert_commands, additional_insert
+from . import user_comands,insert_commands, insert_test

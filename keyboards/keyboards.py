@@ -50,3 +50,14 @@ phone_kb = ReplyKeyboardMarkup(
     resize_keyboard=True,
     one_time_keyboard=True,
 )
+
+test_kb = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="Внести дб"),
+            KeyboardButton(text="Запросить дб"),
+        ]
+    ],
+    resize_keyboard=True,
+    one_time_keyboard=True,
+)

@@ -1,14 +1,16 @@
 import aiosqlite
+import asyncio
 
+FILE_PATH = r'C:\Users\siver\pythonProject\aiogram-bot\sqlite.db'
 async def create_tables():
- async with aiosqlite.connect('../sqlite.db') as db:
+ async with aiosqlite.connect(FILE_PATH) as db:
         await db.execute('''
-            CREATE TABLE IF NOT EXISTS ИНН (
+            CREATE TABLE IF NOT EXISTS INN (
                 Номер_ИНН TEXT PRIMARY KEY,
                 Название_организации TEXT,
                 Юр_Адрес TEXT,
                 Контактные_данные TEXT,
-                FOREIGN KEY (Контактные_данные) REFERENCES User(ФИО)
+                FOREIGN KEY (Контактные_данные) REFERENCES User(tg_id)
             )
         ''')
         await db.execute('''
@@ -24,7 +26,7 @@ async def create_tables():
             )
         ''')
         await db.execute('''
-            CREATE TABLE IF NOT EXISTS Типн_оменклатуры (
+            CREATE TABLE IF NOT EXISTS Тип_номенклатуры (
                 Тип TEXT PRIMARY KEY
             )
         ''')
@@ -37,5 +39,7 @@ async def create_tables():
         ''')
         await db.commit()
 
-import asyncio
+
+
 asyncio.run(create_tables())
+
